@@ -1,7 +1,5 @@
 package org.acme.mapper;
 
-import org.acme.type.TestEnum;
-
 public class TestEnumMapper {
 //  public static final TestEnum map(org.acme.grpc.v1.TestEnum.Type grpc) {
 //    switch (grpc) {

@@ -1,13 +1,14 @@
 package org.acme;
 
-import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Uni;
 import org.acme.grpc.v1.MutinyTestServiceGrpc;
 import org.acme.grpc.v1.TestEnum;
 import org.acme.grpc.v1.TestRequest;
 import org.acme.grpc.v1.TestResponse;
 
-@GrpcService
+import javax.inject.Singleton;
+
+@Singleton
 public class GrpcTestService extends MutinyTestServiceGrpc.TestServiceImplBase {
 
   @Override
