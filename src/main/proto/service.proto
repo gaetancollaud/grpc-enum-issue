@@ -1,0 +1,30 @@
+syntax = "proto3";
+package org.acme.grpc.v1;
+
+option java_multiple_files = true;
+option java_package = "org.acme.grpc.v1";
+
+service TestService {
+    rpc testMethodOne (TestRequest) returns (TestResponse);
+    rpc testMethodTwo (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+    TestMessage test_message = 1;
+}
+
+message TestResponse {
+    string text = 1;
+}
+
+message TestMessage{
+    TestEnum.Type test_field = 1;
+}
+
+message TestEnum {
+    enum Type {
+        UNKNOWN = 0;
+        FOO = 1;
+        BAR = 2;
+    }
+}
